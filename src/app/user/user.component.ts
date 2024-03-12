@@ -7,9 +7,10 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
+
 export class UserComponent implements OnInit {
 
-  userData: any;
+  userData!: User;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,7 +27,7 @@ export class UserComponent implements OnInit {
 
   getUser(id: string){
     let url = "https://jsonplaceholder.typicode.com/users/" + id;
-    this.http.get<any>(url).subscribe(
+    this.http.get<User>(url).subscribe(
       res=>{
         this.userData = res;
       }
@@ -37,11 +38,24 @@ export class UserComponent implements OnInit {
 
 //Megcsinálni a https://jsonplaceholder.typicode.com/users/1 responsa alapján
 type User = {
+  id: number,
+  name: string,
+  email: string,
   address: {
     street: string,
+    suite: string,
+    city: string,
+    zipcode: string,
     geo: {
       lat: number,
       lng: number
     }
-  } 
+  } ,
+  phone: string,
+  website: string,
+  company: {
+    name: string,
+    catchPhrase: string,
+    bs: string
+  }
 }
