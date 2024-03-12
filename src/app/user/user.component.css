@@ -1,10 +1,66 @@
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+} 
+
 #outside-div{
     display: flex;
     gap: 50px;
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .user{
-    padding: 20px 30px;
+    padding: 40px 30px;
     border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    background-color: #c6aecd;
+    width: fit-content;
+}
+
+.profile-pic-div, .text-side{
+    display: grid;
+    place-items: center;
+}
+
+img{
+    width: 150px;
+}
+
+.user-text{
+    margin-top: 20px;
+}
+
+.u-td-data{
+    padding-left: 20px;
+}
+
+.userDetails{
+    background-color: #9baddb;
+    padding: 40px 50px 40px 90px;
+    border-radius: 20px;
+    /* width: fit-content; */
+}
+
+h5{
+    text-decoration: underline;
+}
+
+#ud-table{
+    margin-top: 20px;
+}
+
+.ud-td-data{
+    padding-left: 50px;
+    padding-top: 5px;
 }

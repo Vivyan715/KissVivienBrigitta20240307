@@ -40,6 +40,7 @@ export class UserComponent implements OnInit {
 type User = {
   id: number,
   name: string,
+  username: string,
   email: string,
   address: {
     street: string,

@@ -1,14 +1,96 @@
 <!-- <p>Név: {{userData.name}}</p> -->
 
 <div class="container" id="outside-div">
-    <div class="col-6 user " style="background-color: aquamarine;">
+    <div class="col-6 user">
         <!-- username, name, email address -->
-        <img src="profile-pic.jpg" alt="cica">
-        <p>Név: {{userData.name}}</p>
+        <div class="profile-pic-div">
+            <img src="https://i.pinimg.com/564x/fd/82/26/fd8226da88c30648433bff3e62fc4823.jpg" alt="cica" class="rounded-4">
+        </div>
+        <div class="text-side">
+            <table>
+                <tr>
+                    <td class="poppins-semibold">Name:</td>
+                    <td class="poppins-regular u-td-data">{{userData.name}}</td>
+                </tr>
+
+                <tr>
+                    <td class="poppins-semibold">User name:</td>
+                    <td class="poppins-regular u-td-data">{{userData.username}}</td>
+                </tr>
+
+                <tr>
+                    <td class="poppins-semibold">E-mail address:</td>
+                    <td class="poppins-regular u-td-data">{{userData.email}}</td>
+                </tr>
+            </table>
+        </div>
     </div>
 
-    <div class="col-6 userDetails " style="background-color: blueviolet;">
+    <div class="col-6 userDetails">
         <!-- more details -->
-        <p>Név: {{userData.name}}</p>
+        <h5 class="text-center poppins-semibold">Address</h5>
+        <table id="ud-table">
+            <tr>
+                <td class="poppins-semibold">Street:</td>
+                <td class="poppins-regular ud-td-data">{{userData.address.street}}</td>
+            </tr>
+
+            <tr>
+                <td class="poppins-semibold">Suite:</td>
+                <td class="poppins-regular ud-td-data">{{userData.address.suite}}</td>
+            </tr>
+
+            <tr>
+                <td class="poppins-semibold">City:</td>
+                <td class="poppins-regular ud-td-data">{{userData.address.city}}</td>
+            </tr>
+
+            <tr>
+                <td class="poppins-semibold">Zip code:</td>
+                <td class="poppins-regular ud-td-data">{{userData.address.zipcode}}</td>
+            </tr>
+        </table>
+
+        <p class="text-center mt-3 mb-1 poppins-semibold text-decoration-underline">Geo</p>
+        <table>
+            <tr>
+                <td class="poppins-semibold">Latitude:</td>
+                <td class="poppins-regular ud-td-data">{{userData.address.geo.lat}}</td>
+            </tr>
+            <tr>
+                <td class="poppins-semibold">Longitude:</td>
+                <td class="poppins-regular ud-td-data">{{userData.address.geo.lng}}</td>
+            </tr>
+        </table>
+
+        <table id="ud-table">
+            <tr>
+                <td class="poppins-semibold">Phone number:</td>
+                <td class="poppins-regular ud-td-data">{{userData.phone}}</td>
+            </tr>
+
+            <tr>
+                <td class="poppins-semibold">Website:</td>
+                <td class="poppins-regular ud-td-data">{{userData.website}}</td>
+            </tr>
+        </table>
+
+        <p class="text-center mt-3 mb-1 poppins-semibold text-decoration-underline">Company</p>
+        <table>
+            <tr>
+                <td class="poppins-semibold">Name:</td>
+                <td class="poppins-regular ud-td-data">{{userData.company.name}}</td>
+            </tr>
+
+            <tr>
+                <td class="poppins-semibold">Catch Phrase:</td>
+                <td class="poppins-regular ud-td-data">{{userData.company.catchPhrase}}</td>
+            </tr>
+
+            <tr>
+                <td class="poppins-semibold">BS:</td>
+                <td class="poppins-regular ud-td-data">{{userData.company.bs}}</td>
+            </tr>
+        </table>
     </div>
 </div>
