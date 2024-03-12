@@ -1,0 +1,10 @@
+#outside-div{
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.user{
+    padding: 20px 30px;
+    border-radius: 20px;
+}
